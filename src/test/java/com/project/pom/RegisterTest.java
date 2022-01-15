@@ -6,16 +6,12 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import static org.junit.Assert.*;
 
-public class RegisterTest extends RegisterPageF {
+public class RegisterTest  {
 
-    public RegisterTest(WebDriver driver) {
-		super(driver);
-		//TODO Auto-generated constructor stub
-	}
 
 	private WebDriver driver;
     RegisterPageF registerPage;
-    
+
     @Before
     public void setUp() throws Exception {
         registerPage = new RegisterPageF(driver);
