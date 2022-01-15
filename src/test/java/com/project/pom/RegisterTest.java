@@ -3,27 +3,28 @@ package com.project.pom;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import static org.junit.Assert.*;
 
-public class RegisterTest {
+public class RegisterTest extends RegisterPageF {
 
-    private WebDriver driver;
-    RegisterPage regiterPage;
+    public RegisterTest(WebDriver driver) {
+		super(driver);
+		//TODO Auto-generated constructor stub
+	}
 
+	private WebDriver driver;
+    RegisterPageF registerPage;
+    
     @Before
-    public void setUp() throws Excption {
-        registerPage = new RegisterPage(driver);
+    public void setUp() throws Exception {
+        registerPage = new RegisterPageF(driver);
         driver = registerPage.chromeDriverConnection();
         registerPage.visit("http://demo.guru99.com/test/newtours/");
     }
 
     @After
-    public void tearDown() throws Excption{
+    public void tearDown() throws Exception{
         driver.quit();
     }
 

@@ -1,8 +1,12 @@
 package com.project.pom;
 
-import org.openqa.selenium.WebDriver;
+import java.util.List;
 
-public class RegisterPage extends Base {
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class RegisterPageF extends Base{
 
     By registerLinkLocator = By.linkText("REGISTER");
     By registerPageLocator = By.xpath("//img[@src='images/mast_register.gif']");
@@ -12,10 +16,12 @@ public class RegisterPage extends Base {
     By singInBntLocater = By.name("submit");
     By registerMessage = By.tagName("font");
 
-    public RegisterPage(WebDriver driver) {
-        super(driver);
-    }
 
+	public RegisterPageF(WebDriver driver) {
+		super(driver);
+		//TODO Auto-generated constructor stub
+	}
+    
     public void registerUser() throws InterruptedException {
         click(registerLinkLocator);
         Thread.sleep(2000);
@@ -31,7 +37,9 @@ public class RegisterPage extends Base {
     
     public String registeredMessage(){
 
-        List<WebElement> fonts = findElements(registeredMessage);
+        List<WebElement> fonts = findElements(registerMessage);
         return getText(fonts.get(5));
     }
+
+    
 }
