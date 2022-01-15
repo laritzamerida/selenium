@@ -1,4 +1,4 @@
-package com.project.pom;
+package com.project.pom.base;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +14,7 @@ public class Base {
         this.driver= driver;
     }
     public WebDriver chromeDriverConnection(){
-        System.setProperty("http://demo.guru99.com/test/newtours/", "./src/main/resources/ChromeWebDriver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "./src/main/resources/ChromeWebDriver/chromedriver.exe");
         driver = new ChromeDriver();
         return driver;
     }

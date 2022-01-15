@@ -1,12 +1,13 @@
-package com.project.pom;
+package com.project.pom.page;
 
 import java.util.List;
 
+import com.project.pom.base.Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class RegisterPageF extends Base{
+public class MercuryToursRegisterPage extends Base {
 
     By registerLinkLocator = By.linkText("REGISTER");
     By registerPageLocator = By.xpath("//img[@src='images/mast_register.gif']");
@@ -17,7 +18,7 @@ public class RegisterPageF extends Base{
     By registerMessage = By.tagName("font");
 
 
-	public RegisterPageF(WebDriver driver) {
+	public MercuryToursRegisterPage(WebDriver driver) {
 		super(driver);
 		//TODO Auto-generated constructor stub
 	}
